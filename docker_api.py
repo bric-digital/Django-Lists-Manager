@@ -67,7 +67,7 @@ def import_lists(import_file):
                 for field_key in item_json.get('fields', {}).keys():
                     field_value = item_json.get('fields', {}).get(field_key, None)
 
-                    setattr(item_obj, field_key, field_value)
+                    setattr(list_obj, field_key, field_value)
 
                 for item_json in list_json['items']:
                     if item_json.get('model', None) == 'lists_manager.listitem':
