@@ -1,3 +1,5 @@
+# pylint: disable=line-too-long
+
 from django.contrib.postgres.fields import ArrayField
 from django.db import models
 
@@ -7,7 +9,7 @@ class Vocabulary(models.Model):
     definition = models.JSONField(null=True, blank=True)
 
     def __str__(self):
-        return self.name
+        return '%s' % self.name
 
 class List(models.Model):
     name = models.CharField(max_length=1024)
@@ -16,7 +18,7 @@ class List(models.Model):
     vocabulary = models.ForeignKey(Vocabulary, related_name='lists', blank=True, null=True, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.name
+        return '%s' % self.name
 
 class ListItem(models.Model):
     name = models.CharField(max_length=1024)

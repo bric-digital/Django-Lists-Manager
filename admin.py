@@ -1,4 +1,4 @@
-# pylint: disable=ungrouped-imports
+# pylint: disable=ungrouped-imports,no-member
 
 from django.contrib import admin
 
